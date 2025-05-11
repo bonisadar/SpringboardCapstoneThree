@@ -1,0 +1,26 @@
+Model Architecture
+
+Our final model is a deep Convolutional Neural Network (CNN) built using TensorFlow/Keras, 
+specifically tailored for binary classification of defective vs. non-defective jar lids.
+
+Input Layer: (128, 128, 1)
+↓
+Conv2D: 32 filters,  5x5, 'same' padding → initializer 'he_normal' → LeakyReLU(0.1) →  MaxPooling2D (2x2)
+Output: (64, 64, 32)
+↓
+Conv2D: 64 filters,  5x5, 'same' padding → initializer 'he_normal' → LeakyReLU(0.1) →  MaxPooling2D (2x2)
+Output: (32, 32, 64)
+↓
+Conv2D: 128 filters,  5x5, 'same' padding → initializer 'he_normal' → LeakyReLU(0.1) →  MaxPooling2D (2x2)
+Output: (16, 16, 128)
+↓
+Flatten
+Output: 32768
+↓
+Dense Layer: 256 units, ReLU, initializer 'he_normal'
+↓
+Dropout (rate=0.3)
+↓
+Dense Layer: 2 units (logits for binary classification)
+
+Optimizer: Adam | Loss: Sparse Categorical Crossentropy

@@ -174,29 +174,24 @@ To further enhance the model's performance and robustness, several future direct
 explored:
 
 1. **Leverage Pre-trained Models**  
-   Utilize transfer learning with well-established architectures such as **VGG16**, **ResNet50**, or **EfficientNet**. 
+   Utilizing transfer learning with well-established architectures such as **VGG16**, **ResNet50**, or **EfficientNet**. 
    These models, pre-trained on large-scale datasets like ImageNet, can provide powerful feature extraction capabilities 
    with minimal training data.
 
-2. **Fine-tuning Specific Layers**  
-   Instead of training all layers from scratch, selectively fine-tune a few **initial convolutional layers** while 
-   keeping the rest frozen. This approach can improve generalization and reduce overfitting, especially when training 
-   on limited data.
-
-3. **Deeper Architectures**  
-   Experiment with **deeper CNNs** that include additional convolutional and pooling layers. This may help the model 
+2. **Deeper Architectures**  
+   Experimenting with **deeper CNNs** that include additional convolutional and pooling layers. This may help the model 
    capture more abstract, high-level features crucial for identifying subtle defects.
 
-4. **Mixed Activation Functions**  
+3. **Mixed Activation Functions**  
    Explore using different **activation functions** (e.g., ReLU, Leaky ReLU, PReLU, Swish) across various layers instead 
    of a single activation type. This can introduce non-linear diversity and improve model expressiveness.
 
-5. **Inception-based Architectures**  
+4. **Inception-based Architectures**  
    **Inception modules**, which combine multiple filter sizes within the same layer to capture features at different 
    scales. This may be especially effective for capturing both fine and coarse structural details in jarlid images.
 
-6. **Data Augmentation Strategies**  
-   Continue expanding the dataset with **advanced augmentation** (e.g., elastic deformation, random occlusion, 
+5. **Data Augmentation Strategies**  
+   Continuing expanding the dataset with **advanced augmentation** (e.g., elastic deformation, random occlusion, 
    noise injection) to simulate real-world variability and further improve generalization.
 
 ---
